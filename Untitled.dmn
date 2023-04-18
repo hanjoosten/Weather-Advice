@@ -116,13 +116,13 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:inputData id="_20B663D2-A9C7-4045-9BB1-719FCB3F6CC8" name="MyName">
+  <dmn:inputData id="_20B663D2-A9C7-4045-9BB1-719FCB3F6CC8" name="Name">
     <dmn:extensionElements/>
-    <dmn:variable id="_30DE3622-E7A7-4D48-AE45-FB6887358A0E" name="MyName" typeRef="string"/>
+    <dmn:variable id="_30DE3622-E7A7-4D48-AE45-FB6887358A0E" name="Name" typeRef="string"/>
   </dmn:inputData>
   <dmn:decision id="_6291F936-1DD1-4F34-ACDE-F23ECC9A906E" name="Daily-Advice">
     <dmn:extensionElements/>
-    <dmn:variable id="_12EE25BE-E884-4BA3-84B0-4AC543FC50DC" name="Daily-Advice"/>
+    <dmn:variable id="_12EE25BE-E884-4BA3-84B0-4AC543FC50DC" name="Daily-Advice" typeRef="string"/>
     <dmn:informationRequirement id="_A90B831F-D282-433C-B7F0-8172334F8F61">
       <dmn:requiredDecision href="#_18DEE864-1318-45F9-ACA2-E616BD4B2178"/>
     </dmn:informationRequirement>
@@ -130,7 +130,7 @@
       <dmn:requiredInput href="#_20B663D2-A9C7-4045-9BB1-719FCB3F6CC8"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_2008226B-BC4C-46F0-B69F-9F8A9F31A72E">
-      <dmn:text>MyName</dmn:text>
+      <dmn:text>if Name = "" then "Sorry, we don't have enough information to provide a response."else "Hello "+Name+"! "+Weather-Advice</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmndi:DMNDI>
@@ -146,7 +146,7 @@
             <kie:width>100</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_2008226B-BC4C-46F0-B69F-9F8A9F31A72E">
-            <kie:width>300</kie:width>
+            <kie:width>982</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
@@ -174,7 +174,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="388" y="293.63202369679647" width="100" height="50"/>
+        <dc:Bounds x="408" y="290.63202369679647" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_6291F936-1DD1-4F34-ACDE-F23ECC9A906E" dmnElementRef="_6291F936-1DD1-4F34-ACDE-F23ECC9A906E" isCollapsed="false">
@@ -195,7 +195,7 @@
         <di:waypoint x="459" y="205.08378055872407"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_E35C61FD-AAD3-4F2E-B082-1DC083417E7A" dmnElementRef="_E35C61FD-AAD3-4F2E-B082-1DC083417E7A">
-        <di:waypoint x="438" y="318.6320236967965"/>
+        <di:waypoint x="458" y="315.63202369679647"/>
         <di:waypoint x="459" y="205.08378055872407"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>

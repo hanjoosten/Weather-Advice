@@ -1,0 +1,15 @@
+target
+
+*.code-workspace
+
+.history
+
+**/kie-dmn-xls2dmn-*.jar
+
+**/\~$*.xlsx
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
